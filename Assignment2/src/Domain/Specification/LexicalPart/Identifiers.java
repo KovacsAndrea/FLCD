@@ -2,8 +2,8 @@ package Domain.Specification.LexicalPart;
 
 public class Identifiers {
 
-    public static boolean isIdentifier(String token) {
-        String pattern = "^[a-zA-Z]([a-z|A-Z|0-9|_])*$";
-        return token.matches(pattern);
+    private static final String _identifierPattern = "^[a-zA-Z]([a-z|A-Z|0-9])*$";
+    public static String getIdentifierPattern() {
+        return  _identifierPattern;
     }
 }

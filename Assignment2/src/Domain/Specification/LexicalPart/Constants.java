@@ -1,12 +1,19 @@
 package Domain.Specification.LexicalPart;
 
 public class Constants {
-    public static boolean isConstant(String token) {
-        String numericPattern = "^0|[+|-][1-9]([0-9])*|[1-9]([0-9])*|[+|-][1-9]([0-9])*\\.([0-9])*|[1-9]([0-9])*\\.([0-9])*$";
-        String charPattern = "^\'[a-zA-Z0-9_?!#*./%+=<>;)(}{ ]\'";
-        String stringPattern = "^\"[a-zA-Z0-9_?!#*./%+=<>;)(}{ ]+\"";
-        return token.matches(numericPattern) ||
-                token.matches(charPattern) ||
-                token.matches(stringPattern);
+    private static final String _numericPattern = "^0|[+|-][ ][1-9]([0-9])*|[1-9]([0-9])*|[+|-][1-9]([0-9])*\\.([0-9])*|[1-9]([0-9])*\\.([0-9])*$";
+    private static final String _charPattern = "^'[a-zA-Z0-9_?!#*./%+=<>;)(}{ ]*'";
+    private static final String _stringPattern = "^\"[a-zA-Z0-9_?!#*./%+=<>;)(}{ ]*\"";
+
+    public static String getNumericPattern(){
+        return _numericPattern;
+    }
+
+    public static String getCharPattern(){
+        return _charPattern;
+    }
+
+    public static String getStringPattern(){
+        return _stringPattern;
     }
 }

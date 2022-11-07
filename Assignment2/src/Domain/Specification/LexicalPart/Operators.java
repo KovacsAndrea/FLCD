@@ -57,7 +57,7 @@ public class Operators {
         return s.equals("!") || s.equals("=") || s.equals("<") || s.equals("+") || s.equals("-");
     }
 
-    private static List<String> getAll(){
+    public static List<String> getAll(){
         return _allOperators;
     }
 
