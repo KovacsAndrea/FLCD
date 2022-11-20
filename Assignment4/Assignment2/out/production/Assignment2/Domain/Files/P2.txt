@@ -1,0 +1,17 @@
+DECLARE n INTEGER
+DECLARE a ARRAY[n] OF INTEGER
+DECLARE i INTEGER
+DECLARE sum INTEGER
+i = 1
+WHILE ( i <= n ) DO
+	READ ( a[i] )
+	i = i + 1
+DONE
+i = 1
+sum = 0
+WHILE ( i <= n ) DO
+	sum = sum + a[i]
+	i = i + 1
+DONE
+WRITE sum
+
