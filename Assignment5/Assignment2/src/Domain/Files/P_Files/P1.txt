@@ -1,0 +1,50 @@
+DECLARE a  INTEGER
+DECLARE b  INTEGER
+DECLARE c  INTEGER
+READ (a)
+READ (b)
+READ (c)
+a = + 2
+DECLARE maxab INTEGER
+DECLARE maxbc INTEGER
+DECLARE minab INTEGER
+DECLARE minbc INTEGER
+DECLARE maxResult INTEGER
+DECLARE minResult INTEGER
+IF ( a < b ) DO:
+	maxab = b
+ELSE DO:
+	maxab = a
+DONE
+
+IF ( c < b ) DO:
+	maxbc = b
+ELSE DO:
+	maxbc = c
+DONE
+
+IF ( maxbc < maxab ) DO:
+	maxResult = maxab
+ELSE DO:
+	maxResult = maxbc
+DONE
+
+IF ( a < b ) DO:
+	minab = a
+ELSE DO:
+	minab = b
+DONE
+
+IF ( c < b ) DO:
+	minbc = c
+ELSE DO:
+	minbc = b
+DONE
+
+IF ( minbc < minab ) DO:
+	minResult = minbc
+ELSE DO:
+	minResult = minab
+DONE
+WRITE (maxResult)
+WRITE (minResult)
