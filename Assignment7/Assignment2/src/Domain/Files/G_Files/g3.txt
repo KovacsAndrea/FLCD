@@ -1,0 +1,9 @@
+N = { S A B C }
+E = { ( ) + * INT }
+S = S
+P = {
+    S -> A B
+    A -> ( S ) | INT C
+    B -> + S | EPSILON
+    C -> * A | EPSILON
+}

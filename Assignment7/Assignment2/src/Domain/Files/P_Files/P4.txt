@@ -1,0 +1,3 @@
+DECLARE 2a CHAR
+2a = 'a
+
